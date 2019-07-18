@@ -7,13 +7,11 @@ library(PRROC)
 theme_set(theme_minimal())
 
 if (!requireNamespace("PRROC", quietly = TRUE)) {
-  message("Installing `PRROC`")
-  install.packages("PRROC")
+  stop("`PRROC` is required: install.packages('PRROC')")
 }
 
 if (!requireNamespace("cowplot", quietly = TRUE)) {
-  message("Installing `cowplot`")
-  install.packages("cowplot")
+  stop("`cowplot` is required: install.packages('cowplot')")
 }
 
 gen_data <- function(n = 5) {
