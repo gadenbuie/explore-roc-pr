@@ -53,7 +53,16 @@ ui <- basicPage(
     click = "line_plot_click",
     dblclick = "line_plot_dblclick"
   ),
-  plotOutput("roc_pr_plot")
+  plotOutput("roc_pr_plot"),
+  tags$div(
+    style = "position: absolute; top: 0; right: 0;",
+    # https://github.blog/2008-12-19-github-ribbons/
+    HTML(
+      '<a href="https://github.com/gadenbuie/explore-roc-pr">
+      <img width="149" height="149" src="fork-on-gh.png" class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1">
+      </a>'
+    )
+  )
 )
 
 server <- function(
